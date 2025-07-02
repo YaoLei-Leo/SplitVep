@@ -5,7 +5,7 @@ The INFO/CSQ field annotated by VEP is separated with | and hard to read. This s
 A compressed VCF file with "##INFO=<ID=CSQ" in the header.
 
 # Run the software
-The software currently support Linux system only.
+The software supports Linux system only currently.
 ```console
 ./SplitVep <input.vcf.gz> <output_prefix>
 ```
