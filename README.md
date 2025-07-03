@@ -9,8 +9,14 @@ A compressed VCF file with "##INFO=<ID=CSQ" in the header.
 
 # Run the software
 The software supports **Linux** system only currently.
+
+## 1. Convert VEP annotated vcf.gz file into bgzip compressed tsv.gz file.
 ```console
 ./SplitVep <input.vcf.gz> <output_prefix> <tmp_folder>
+```
+## 2. Index the converted tsv.gz file with tabix.
+```console
+tabix -s 1 -b 2 -e 2 -S 1 <output_prefix>.tsv.gz
 ```
 
 # Output
