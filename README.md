@@ -1,13 +1,16 @@
 # SplitVep
-The INFO/CSQ field annotated by VEP is separated with | and hard to read. This software is to convert the VEP annotated VCF file into CSV formatted file.
+The INFO/CSQ field in the Ensembl VEP annotated VCF file are separated with pipe "|", which make the annotations hard to extract by bcftools. Also, for multi-allelic variants, VEP stores the annotations in the same INFO/CSQ line with comma "," as seperator， which exacerbate the situation. This software is to convert the VEP annotated VCF file into bgzip compressed a TSV formatted file.
+
+# Dependency
+SplitVep requires htslib installed in the system.
 
 # Input
 A compressed VCF file with "##INFO=<ID=CSQ" in the header.
 
 # Run the software
-The software supports Linux system only currently.
+The software supports **Linux** system only currently.
 ```console
-./SplitVep <input.vcf.gz> <output_prefix>
+./SplitVep <input.vcf.gz> <output_prefix> <tmp_folder>
 ```
 
 # Output
